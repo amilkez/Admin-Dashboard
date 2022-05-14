@@ -40,6 +40,11 @@ ul li {
 	list-style-type: none;
 }
 
+.profile-picture {
+	border-radius: 50%;
+	width: 3rem;
+}
+
 /* Nav */
 
 .nav {
@@ -91,10 +96,47 @@ ul li {
 	color: var(--bg-color-secondary);
 }
 
+/* Header */
+
 .header {
 	background-color: var(--bg-color-primary);
 	grid-area: header;
 }
+
+.top-header ul {
+	display: flex;
+	justify-content: space-between;
+	align-items: center;
+	margin-top: 0.5rem;
+}
+
+.top-header-left {
+	flex-basis: 60%;
+}
+
+.top-header-left li,
+.top-header-left input,
+.top-header-left label {
+	display: flex;
+	margin: 0 1.5rem;
+}
+
+.top-header-left #search {
+	flex: 1 1 50%;
+}
+
+.top-header-right {
+	display: flex;
+	justify-content: space-around;
+	align-items: center;
+	margin-right: 3rem;
+}
+
+.top-header-right li {
+	margin: 0 1.5rem;
+}
+
+/* Main */
 
 .main {
 	grid-area: main;

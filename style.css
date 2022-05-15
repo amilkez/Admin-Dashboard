@@ -21,9 +21,10 @@
 body {
 	background-color: var(--bg-color-secondary);
 	font-family: "Lato", sans-serif;
+	height: 100vh;
 	display: grid;
 	grid-template-columns: 1fr 4fr;
-	grid-template-rows: 1fr 3fr;
+	grid-template-rows: 1fr 6fr;
 	grid-template-areas:
 		"nav header"
 		"nav main";
@@ -52,7 +53,7 @@ ul li {
 	color: var(--bg-color-primary);
 	grid-area: nav;
 	display: grid;
-	grid-template-rows: 1fr 3fr 4fr;
+	grid-template-rows: 1fr 3fr 3fr;
 }
 
 .logo {
@@ -101,39 +102,55 @@ ul li {
 .header {
 	background-color: var(--bg-color-primary);
 	grid-area: header;
+	display: grid;
+	grid-template-columns: 3fr 1fr;
+	grid-template-rows: 1fr 1fr;
+	grid-template-areas:
+		"top-header top-header"
+		"bottom-header bottom-header";
 }
 
-.top-header ul {
+.top-header {
+	grid-area: top-header;
+}
+
+.top-header > ul {
+	display: grid;
+	grid-template-columns: 3fr 1fr;
+}
+
+.top-header-left li {
 	display: flex;
-	justify-content: space-between;
-	align-items: center;
-	margin-top: 0.5rem;
-}
-
-.top-header-left {
-	flex-basis: 60%;
-}
-
-.top-header-left li,
-.top-header-left input,
-.top-header-left label {
-	display: flex;
-	margin: 0 1.5rem;
 }
 
 .top-header-left #search {
-	flex: 1 1 50%;
+	flex: 0 1 60%;
+	outline: none;
 }
 
 .top-header-right {
+	justify-self: end;
 	display: flex;
-	justify-content: space-around;
-	align-items: center;
-	margin-right: 3rem;
 }
 
-.top-header-right li {
-	margin: 0 1.5rem;
+/* *************** */
+
+.bottom-header {
+	grid-area: bottom-header;
+}
+
+.bottom-header ul {
+	grid-template-columns: 3fr 1fr;
+	display: grid;
+}
+
+.user-info {
+	display: flex;
+}
+
+.buttons {
+	justify-self: end;
+	display: flex;
 }
 
 /* Main */

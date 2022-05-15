@@ -158,6 +158,8 @@ ul li {
 .main {
 	grid-area: main;
 	display: grid;
+	gap: 2rem;
+	margin: 2rem 1rem;
 	grid-template-columns: 3fr 1fr;
 	grid-template-rows: 1fr 1fr;
 	grid-template-areas:
@@ -169,13 +171,21 @@ ul li {
 	grid-area: projects;
 	display: grid;
 	gap: 2rem;
-	grid-template-columns: repeat(auto-fit, minmax(200px, 1fr));
+	grid-template-columns: repeat(auto-fit, minmax(350px, 1fr));
+}
+
+/* Cards */
+
+.card {
+	background-color: var(--bg-color-primary);
 }
 
 .announcements {
 	grid-area: announcements;
+	background-color: var(--bg-color-primary);
 }
 
 .trending {
 	grid-area: trending;
+	background-color: var(--bg-color-primary);
 }

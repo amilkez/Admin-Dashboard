@@ -16,6 +16,7 @@
 	--cta-action-color: hsl(185, 100%, 42%);
 	--bg-color-primary: hsl(0, 0%, 98%);
 	--bg-color-secondary: hsl(0, 0%, 90%);
+	--favorite: hsl(50, 100%, 50%);
 }
 
 body {
@@ -53,13 +54,16 @@ ul li {
 	color: var(--bg-color-primary);
 	grid-area: nav;
 	display: grid;
-	grid-template-rows: 1fr 3fr 3fr;
+	grid-template-rows: 100px 1fr;
 }
 
 .logo {
 	display: flex;
 	align-items: center;
 	margin-left: 1rem;
+	margin-top: 0;
+	margin-bottom: 0;
+	font-size: 1.7rem;
 }
 
 .main-links,
@@ -67,15 +71,17 @@ ul li {
 	margin-left: 1rem;
 }
 
+.nav-links {
+	display: flex;
+	flex-direction: column;
+	justify-content: space-between;
+}
+
 .nav-link {
 	display: flex;
 	align-items: center;
-	margin: 1rem 0;
+	margin: 1rem 0 1rem 1.5rem;
 	font-weight: bold;
-}
-
-.nav > .additional-links {
-	align-self: end;
 }
 
 .nav .nav-icon svg {
@@ -112,6 +118,7 @@ ul li {
 
 .top-header {
 	grid-area: top-header;
+	margin: 1rem 2rem 0;
 }
 
 .top-header > ul {
@@ -137,6 +144,7 @@ ul li {
 
 .bottom-header {
 	grid-area: bottom-header;
+	margin: 1rem 2rem;
 }
 
 .bottom-header ul {
@@ -171,13 +179,21 @@ ul li {
 	grid-area: projects;
 	display: grid;
 	gap: 2rem;
-	grid-template-columns: repeat(auto-fit, minmax(350px, 1fr));
+	grid-template-columns: repeat(auto-fit, minmax(250px, 1fr));
 }
 
 /* Cards */
 
 .card {
 	background-color: var(--bg-color-primary);
+	display: flex;
+	flex-direction: column;
+	justify-content: space-between;
+}
+
+.card-btns {
+	align-self: flex-end;
+	display: flex;
 }
 
 .announcements {
